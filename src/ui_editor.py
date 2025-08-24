@@ -8,6 +8,8 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, QTimer, QDir
 from PyQt5.QtGui import QIcon, QFont
 
+from theme_manager import ThemeManager
+
 import markdown
 import os
 
@@ -17,7 +19,7 @@ class MarqueEditor(QMainWindow):
         
         # Estado de la aplicación
         self.current_file = None  # Almacena la ruta del archivo actual
-        
+        self.theme_manager = ThemeManager(self)
         # Configuración inicial de la ventana
         self.setWindowTitle("Marque - Sin Título")
         icon_path = os.path.join(os.path.dirname(__file__), '..', 'res', 'icons', 'marque_icon.png')
@@ -97,6 +99,15 @@ class MarqueEditor(QMainWindow):
 
         save_as_action = file_menu.addAction("Guardar como...")
         save_as_action.triggered.connect(self.save_file_as)
+
+        # Acciones para el menú Temas
+        theme_menu = menu_bar.addMenu("Temas")
+        themes = self.theme_manager.get_available_themes()
+        for theme_name in themes:
+            action = theme_menu.addAction(theme_name.replace('_', ' ').title())
+            action.triggered.connect(lambda _, name=theme_name: self.theme_manager.set_theme_action(name))
+
+  
 
     def open_selected_file(self, index):
         """

@@ -1,0 +1,20 @@
+QMainWindow {
+    background-color: #2e2e2e;
+    color: #d4d4d4;
+}
+QTextEdit, QTreeView {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border: 1px solid #3c3c3c;
+}
+QMenuBar {
+    background-color: #2e2e2e;
+    color: #d4d4d4;
+}
+QMenu {
+    background-color: #2e2e2e;
+    border: 1px solid #4a4a4a;
+}
+QMenu::item:selected {
+    background-color: #555555;
+}
