@@ -1,0 +1,1 @@
+{::comment}Documentación para futuros colaboradores.{:/comment}

@@ -1,0 +1,1 @@
+# Lógica para gestionar archivos y directorios.

@@ -1,0 +1,1 @@
+{::comment}Guía de inicio y descripción del proyecto.{:/comment}

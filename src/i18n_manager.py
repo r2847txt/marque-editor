@@ -1,0 +1,1 @@
+# Lógica para manejar los archivos de idioma.
