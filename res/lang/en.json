@@ -21,5 +21,11 @@
     "error_save_message": "Could not save the file",
     "about_message": "Marque, a Markdown text editor.",
     "en": "English",
-    "es": "Spanish"
+    "es": "Spanish",
+    "about_dialog_title": "About Marque",
+    "version_label": "Version: 0.1.0",
+    "credits_message": "<p>A simple and elegant Markdown text editor.</p><p>Developed with Python and PyQt5.</p>",
+    "github_label": "Repository:",
+    "github_link": "GitHub",
+    "close_button": "Close"
 }

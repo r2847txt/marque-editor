@@ -12,6 +12,7 @@ from PyQt5.QtGui import QIcon, QFont
 
 from theme_manager import ThemeManager
 from i18n_manager import I18nManager
+from about_dialog import AboutDialog
 
 class MarqueEditor(QMainWindow):
     def __init__(self):
@@ -19,7 +20,6 @@ class MarqueEditor(QMainWindow):
         
         self.settings = QSettings('Marque', 'Marque')
         
-        # 1. Instanciar el gestor de idiomas y cargar el idioma guardado
         self.i18n = I18nManager()
         self.i18n.set_locale(self.settings.value('locale', 'en'))
 
@@ -105,7 +105,7 @@ class MarqueEditor(QMainWindow):
         # Menú Ayuda
         help_menu = menu_bar.addMenu(self.i18n.get_text("help_menu"))
         about_action = help_menu.addAction(self.i18n.get_text("about_action"))
-        about_action.triggered.connect(self.show_about_dialog) # Reemplazar con la función real
+        about_action.triggered.connect(self.show_about_dialog)
 
     def change_language(self, lang_code):
         self.i18n.set_locale(lang_code)
