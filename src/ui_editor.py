@@ -170,6 +170,11 @@ class MarqueEditor(QMainWindow):
         # Placeholder para la ventana "Acerca de..."
         QMessageBox.information(self, self.i18n.get_text("about_action"), self.i18n.get_text("about_message"))
 
+    def show_about_dialog(self):
+        """Muestra la ventana "Acerca de..."."""
+        dialog = AboutDialog(self)
+        dialog.exec_()
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     editor = MarqueEditor()
