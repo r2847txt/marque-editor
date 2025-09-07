@@ -21,5 +21,11 @@
     "error_save_message": "No se pudo guardar el archivo",
     "about_message": "Marque, editor de texto Markdown.",
     "en": "Inglés",
-    "es": "Español"
+    "es": "Español",
+    "about_dialog_title": "Acerca de Marque",
+    "version_label": "Versión: 0.1.0",
+    "credits_message": "<p>Un editor de texto Markdown simple y elegante.</p><p>Desarrollado con Python y PyQt5.</p>",
+    "github_label": "Repositorio:",
+    "github_link": "GitHub",
+    "close_button": "Cerrar"
 }
